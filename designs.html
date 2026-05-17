@@ -1,0 +1,338 @@
+<!-- =========================
+designs.html
+========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Designs | LuxeSpace Interiors</title>
+
+    <link rel="stylesheet" href="designs.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <nav>
+
+            <h2 class="logo">LuxeSpace</h2>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="#">Designs</a>
+
+                <a href="consultation.html">
+                    Consultation
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="design-hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Explore Luxury Interior Designs
+            </h1>
+
+            <p>
+                Discover elegant interiors crafted with modern aesthetics,
+                timeless sophistication, and luxurious comfort.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Filter Buttons -->
+
+    <section class="filters">
+
+        <button class="active"
+            data-filter="all">
+
+            All
+
+        </button>
+
+        <button data-filter="living">
+
+            Living Room
+
+        </button>
+
+        <button data-filter="bedroom">
+
+            Bedroom
+
+        </button>
+
+        <button data-filter="kitchen">
+
+            Kitchen
+
+        </button>
+
+        <button data-filter="workspace">
+
+            Workspace
+
+        </button>
+
+    </section>
+
+    <!-- Gallery -->
+
+    <section class="design-gallery">
+
+        <!-- Living Room -->
+
+        <div class="design-card living">
+
+            <img src="images/gallery1.png"
+                alt="Living Room">
+
+            <div class="overlay">
+
+                <h3>Modern Living Room</h3>
+
+                <p>
+                    Elegant luxury interiors with warm lighting.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Bedroom -->
+
+        <div class="design-card bedroom">
+
+            <img src="images/gallery2.png"
+                alt="Bedroom">
+
+            <div class="overlay">
+
+                <h3>Luxury Bedroom</h3>
+
+                <p>
+                    Minimal and sophisticated bedroom aesthetics.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Kitchen -->
+
+        <div class="design-card kitchen">
+
+            <img src="images/gallery3.png"
+                alt="Kitchen">
+
+            <div class="overlay">
+
+                <h3>Modern Kitchen</h3>
+
+                <p>
+                    Premium modular kitchen concepts.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Workspace -->
+
+        <div class="design-card workspace">
+
+            <img src="images/gallery4.png"
+                alt="Workspace">
+
+            <div class="overlay">
+
+                <h3>Workspace Design</h3>
+
+                <p>
+                    Creative and productive modern workspace.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Living -->
+
+        <div class="design-card living">
+
+            <img src="images/gallery5.png"
+                alt="Dining Area">
+
+            <div class="overlay">
+
+                <h3>Dining Area</h3>
+
+                <p>
+                    Premium dining spaces for luxury living.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Bedroom -->
+
+        <div class="design-card bedroom">
+
+            <img src="images/gallery6.png"
+                alt="Luxury Villa">
+
+            <div class="overlay">
+
+                <h3>Luxury Villa</h3>
+
+                <p>
+                    Spacious and elegant villa interiors.
+                </p>
+
+                <a href="#">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA Section -->
+
+    <section class="cta">
+
+        <h2>
+            Ready To Transform Your Space?
+        </h2>
+
+        <p>
+            Book a personalized consultation with our luxury interior experts.
+        </p>
+
+        <a href="consultation.html">
+
+            Book Consultation
+
+        </a>
+
+    </section>
+
+    <!-- Filter Script -->
+
+    <script>
+
+        const filterButtons =
+            document.querySelectorAll(".filters button");
+
+        const cards =
+            document.querySelectorAll(".design-card");
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                // Remove active class
+
+                filterButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+                // Add active class
+
+                button.classList.add("active");
+
+                // Get filter value
+
+                const filter =
+                    button.getAttribute("data-filter");
+
+                cards.forEach(card => {
+
+                    if (filter === "all") {
+
+                        card.style.display = "block";
+
+                    } else {
+
+                        if (card.classList.contains(filter)) {
+
+                            card.style.display = "block";
+
+                        }
+
+                        else {
+
+                            card.style.display = "none";
+
+                        }
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
