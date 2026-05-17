@@ -15,17 +15,15 @@ body{
     overflow-x:hidden;
 }
 
-/* Navbar */
+/* =========================
+Navbar
+========================= */
 
 .navbar{
-
     width:100%;
-
     position:fixed;
-
     top:0;
     left:0;
-
     z-index:1000;
 
     padding:22px 8%;
@@ -35,6 +33,16 @@ body{
     backdrop-filter:blur(14px);
 
     border-bottom:1px solid rgba(0,0,0,0.06);
+
+    transition:0.4s ease;
+}
+
+.navbar.scrolled{
+
+    background:rgba(255,255,255,0.85);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.06);
 }
 
 nav{
@@ -48,6 +56,8 @@ nav{
     font-weight:700;
     color:#b68d40;
 }
+
+/* Nav Links */
 
 .nav-links{
     display:flex;
@@ -63,10 +73,47 @@ nav{
     font-weight:500;
 
     transition:0.3s ease;
+
+    position:relative;
 }
 
 .nav-links a:hover{
     color:#b68d40;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+
+    height:2px;
+
+    background:#b68d40;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Hamburger */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:1.7rem;
+
+    color:#b68d40;
+
+    cursor:pointer;
 }
 
 /* Main Section */
@@ -251,24 +298,98 @@ nav{
     background:#c8a97e;
 }
 
-/* Responsive */
+/* =========================
+Responsive
+========================= */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-    .consultation-container{
-        grid-template-columns:1fr;
+    /* Navbar */
+
+    nav{
+        position:relative;
     }
 
-    .consultation-text h1{
-        font-size:3rem;
+    .menu-toggle{
+        display:block;
     }
 
     .nav-links{
+
+        position:absolute;
+
+        top:80px;
+
+        right:0;
+
+        width:220px;
+
+        background:white;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:25px;
+
+        border-radius:20px;
+
+        box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
         display:none;
+
+        gap:20px;
     }
 
+    .nav-links.active{
+        display:flex;
+    }
+
+    /* Consultation Section */
+
     .consultation{
-        padding-top:140px;
+
+        padding:130px 6% 80px;
+    }
+
+    .consultation-container{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+    }
+
+    /* Text */
+
+    .consultation-text h1{
+
+        font-size:3rem;
+
+        line-height:1.2;
+    }
+
+    .consultation-text p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+    }
+
+    /* Form */
+
+    .consultation-form{
+
+        width:100%;
+
+        padding:30px 22px;
+    }
+
+    .consultation-form input,
+    .consultation-form select,
+    .consultation-form textarea{
+
+        font-size:1rem;
     }
 
 }
