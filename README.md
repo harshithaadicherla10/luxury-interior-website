@@ -137,8 +137,3 @@ git clone https://github.com/harshithaadicherla10/luxury-interior-website.git
 GitHub:  
 https://github.com/harshithaadicherla10
 
----
-
-## License
-
-This project is created for educational and portfolio purposes.
