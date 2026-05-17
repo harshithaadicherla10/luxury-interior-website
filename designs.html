@@ -73,184 +73,202 @@ designs.html
 
     <!-- Filter Buttons -->
 
-    <section class="filters">
+<section class="filters">
 
-        <button class="active"
-            data-filter="all">
+    <button class="active"
+        data-filter="all">
 
-            All
+        All
 
-        </button>
+    </button>
 
-        <button data-filter="living">
+    <button data-filter="living">
 
-            Living Room
+        Living Room
 
-        </button>
+    </button>
 
-        <button data-filter="bedroom">
+    <button data-filter="bedroom">
 
-            Bedroom
+        Bedroom
 
-        </button>
+    </button>
 
-        <button data-filter="kitchen">
+    <button data-filter="kitchen">
 
-            Kitchen
+        Kitchen
 
-        </button>
+    </button>
 
-        <button data-filter="workspace">
+    <button data-filter="workspace">
 
-            Workspace
+        Workspace
 
-        </button>
+    </button>
 
-    </section>
+    <button data-filter="dining">
 
-    <!-- Gallery -->
+        Dining
 
-    <section class="design-gallery">
+    </button>
 
-        <!-- Living Room -->
+    <button data-filter="villa">
 
-        <div class="design-card living">
+        Luxury Villa
 
-            <img src="images/gallery1.png"
-                alt="Living Room">
+    </button>
 
-            <div class="overlay">
+</section>
 
-                <h3>Modern Living Room</h3>
 
-                <p>
-                    Elegant luxury interiors with warm lighting.
-                </p>
+<!-- Gallery -->
 
-                <a href="#">
-                    View Project
-                </a>
+<section class="design-gallery">
 
-            </div>
+    <!-- Living Room -->
 
-        </div>
+    <div class="design-card living">
 
-        <!-- Bedroom -->
+        <img src="images/gallery1.png"
+            alt="Living Room">
 
-        <div class="design-card bedroom">
+        <div class="overlay">
 
-            <img src="images/gallery2.png"
-                alt="Bedroom">
+            <h3>Modern Living Room</h3>
 
-            <div class="overlay">
+            <p>
+                Elegant luxury interiors with warm lighting.
+            </p>
 
-                <h3>Luxury Bedroom</h3>
-
-                <p>
-                    Minimal and sophisticated bedroom aesthetics.
-                </p>
-
-                <a href="#">
-                    View Project
-                </a>
-
-            </div>
+            <a href="#">
+                View Project
+            </a>
 
         </div>
 
-        <!-- Kitchen -->
+    </div>
 
-        <div class="design-card kitchen">
 
-            <img src="images/gallery3.png"
-                alt="Kitchen">
+    <!-- Bedroom -->
 
-            <div class="overlay">
+    <div class="design-card bedroom">
 
-                <h3>Modern Kitchen</h3>
+        <img src="images/gallery2.png"
+            alt="Bedroom">
 
-                <p>
-                    Premium modular kitchen concepts.
-                </p>
+        <div class="overlay">
 
-                <a href="#">
-                    View Project
-                </a>
+            <h3>Luxury Bedroom</h3>
 
-            </div>
+            <p>
+                Minimal and sophisticated bedroom aesthetics.
+            </p>
 
-        </div>
-
-        <!-- Workspace -->
-
-        <div class="design-card workspace">
-
-            <img src="images/gallery4.png"
-                alt="Workspace">
-
-            <div class="overlay">
-
-                <h3>Workspace Design</h3>
-
-                <p>
-                    Creative and productive modern workspace.
-                </p>
-
-                <a href="#">
-                    View Project
-                </a>
-
-            </div>
+            <a href="#">
+                View Project
+            </a>
 
         </div>
 
-        <!-- Living -->
+    </div>
 
-        <!-- <div class="design-card living">
 
-            <img src="images/gallery5.png"
-                alt="Dining Area">
+    <!-- Kitchen -->
 
-            <div class="overlay">
+    <div class="design-card kitchen">
 
-                <h3>Dining Area</h3>
+        <img src="images/gallery3.png"
+            alt="Kitchen">
 
-                <p>
-                    Premium dining spaces for luxury living.
-                </p>
+        <div class="overlay">
 
-                <a href="#">
-                    View Project
-                </a>
+            <h3>Modern Kitchen</h3>
 
-            </div>
+            <p>
+                Premium modular kitchen concepts.
+            </p>
 
-        </div> -->
+            <a href="#">
+                View Project
+            </a>
 
-        <!-- Bedroom -->
+        </div>
 
-        <!-- <div class="design-card bedroom">
+    </div>
 
-            <img src="images/gallery6.png"
-                alt="Luxury Villa">
 
-            <div class="overlay">
+    <!-- Workspace -->
 
-                <h3>Luxury Villa</h3>
+    <div class="design-card workspace">
 
-                <p>
-                    Spacious and elegant villa interiors.
-                </p>
+        <img src="images/gallery4.png"
+            alt="Workspace">
 
-                <a href="#">
-                    View Project
-                </a>
+        <div class="overlay">
 
-            </div>
+            <h3>Workspace Design</h3>
 
-        </div> -->
+            <p>
+                Creative and productive modern workspace.
+            </p>
 
-    </section>
+            <a href="#">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Dining -->
+
+    <div class="design-card dining">
+
+        <img src="images/gallery5.png"
+            alt="Dining Area">
+
+        <div class="overlay">
+
+            <h3>Dining Area</h3>
+
+            <p>
+                Premium dining spaces for luxury living.
+            </p>
+
+            <a href="#">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Luxury Villa -->
+
+    <div class="design-card villa">
+
+        <img src="images/gallery6.png"
+            alt="Luxury Villa">
+
+        <div class="overlay">
+
+            <h3>Luxury Villa</h3>
+
+            <p>
+                Spacious and elegant villa interiors.
+            </p>
+
+            <a href="#">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- CTA Section -->
 
@@ -274,64 +292,66 @@ designs.html
 
     <!-- Filter Script -->
 
-    <script>
+<script>
 
-        const filterButtons =
-            document.querySelectorAll(".filters button");
+const filterButtons =
+document.querySelectorAll(".filters button");
 
-        const cards =
-            document.querySelectorAll(".design-card");
+const cards =
+document.querySelectorAll(".design-card");
 
-        filterButtons.forEach(button => {
+filterButtons.forEach(button => {
 
-            button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-                // Remove active class
+        // Remove active class
 
-                filterButtons.forEach(btn => {
+        filterButtons.forEach(btn => {
 
-                    btn.classList.remove("active");
-
-                });
-
-                // Add active class
-
-                button.classList.add("active");
-
-                // Get filter value
-
-                const filter =
-                    button.getAttribute("data-filter");
-
-                cards.forEach(card => {
-
-                    if (filter === "all") {
-
-                        card.style.display = "block";
-
-                    } else {
-
-                        if (card.classList.contains(filter)) {
-
-                            card.style.display = "block";
-
-                        }
-
-                        else {
-
-                            card.style.display = "none";
-
-                        }
-
-                    }
-
-                });
-
-            });
+            btn.classList.remove("active");
 
         });
 
-    </script>
+        // Add active class
+
+        button.classList.add("active");
+
+        // Get filter value
+
+        const filter =
+        button.getAttribute("data-filter");
+
+        cards.forEach(card => {
+
+            if(filter === "all"){
+
+                card.style.display = "block";
+
+            }
+
+            else{
+
+                if(card.classList.contains(filter)){
+
+                    card.style.display = "block";
+
+                }
+
+                else{
+
+                    card.style.display = "none";
+
+                }
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
 
